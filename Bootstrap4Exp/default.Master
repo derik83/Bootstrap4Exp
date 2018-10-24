@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.Master.cs" Inherits="Bootstrap4Exp.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="custom.css"/>
+               <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server" style="position: relative;">
+        <div style="">
+            <asp:Menu ID="Menu1" runat="server" CssClass="nav nav-pills" Orientation="Horizontal"
+                StaticMenuStyle-CssClass="nav-item" StaticSelectedStyle-CssClass="nav-item" 
+                StaticSubMenuIndent="16px" DynamicMenuStyle-CssClass="nav-item dropdown-menu" 
+                RenderingMode="List" role="menu" itemscope="itemscope" 
+                itemtype="http://schema.org/SiteNavigationElement" >
+
+                <LevelMenuItemStyles>
+                    <asp:MenuItemStyle CssClass="dropdown-item" HorizontalPadding="15px" Height="50px" VerticalPadding="15px" />
+                </LevelMenuItemStyles>
+                <LevelSelectedStyles>
+                    <asp:MenuItemStyle CssClass="nav-item active" Font-Underline="False" />
+                </LevelSelectedStyles>
+                <StaticHoverStyle Font-Underline="true" />
+                <StaticSelectedStyle Font-Bold="true"   />
+                <DynamicMenuItemStyle CssClass="dropdown-item" />
+
+                <Items>
+                    <asp:MenuItem Text="File" Value="File">
+                        <asp:MenuItem Text="Create New" Value="Create New"></asp:MenuItem>
+                        <asp:MenuItem Text="Open" Value="Open"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Edit" Value="Edit" ></asp:MenuItem>
+                    <asp:MenuItem Text="View" Value="View" ></asp:MenuItem>
+                    <asp:MenuItem Text="Options" Value="Options" ></asp:MenuItem>
+                    <asp:MenuItem Text="Options1" Value="Options" ></asp:MenuItem>
+                    <asp:MenuItem Text="Options2" Value="Options" ></asp:MenuItem>
+                    <asp:MenuItem Text="Options2" Value="Options" ></asp:MenuItem>
+                </Items>
+
+            </asp:Menu>
+        </div>
+
+      
+
+        <br />
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
