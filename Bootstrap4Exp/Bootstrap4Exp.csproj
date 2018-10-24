@@ -106,8 +106,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <Content Include="scss\custom.scss" />
-    <Content Include="style.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.aspx" />
